@@ -54,6 +54,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
             tools:text="Author"
+            android:paddingEnd="5dp"
             android:layout_alignParentEnd="true"
             android:layout_below="@+id/layout_book_list_title"
             android:textColor="@android:color/white"

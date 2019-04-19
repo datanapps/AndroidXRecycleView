@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.recycle_view_book);
 
-        BooksAdapter mAdapter = new BooksAdapter(getBookList());
+        BooksAdapter mAdapter = new BooksAdapter(MainActivity.this, getBookList());
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -61,19 +61,51 @@ public class MainActivity extends AppCompatActivity {
         List<Book> bookList = new ArrayList<>();
 
         Book book = new Book();
-        book.setBookTitle("aaa");
+        book.setBookTitle("The Girl without a name");
         book.setAuthorName("aaa");
-        book.setBookImage("");
+        book.setBookImage("https://static1.squarespace.com/static/5746d6f1b654f905c35b5158/t/574f92014c2f85c0e9423612/1466204180094/");
         book.setPublishedYear(1995);
         bookList.add(book);
 
 
         book = new Book();
-        book.setBookTitle("bbb");
-        book.setAuthorName("bbb");
-        book.setBookImage("");
+        book.setBookTitle("Classic-Childrens-Books");
+        book.setAuthorName("unknown");
+        book.setBookImage("http://cdn.quizly.co/wp-content/uploads/2016/01/25170425/Can-You-Name-These-Classic-Childrens-Books.jpg");
         book.setPublishedYear(1995);
         bookList.add(book);
+
+
+
+        book = new Book();
+        book.setBookTitle("History-books-for-Kids");
+        book.setAuthorName("unknown");
+        book.setBookImage("https://tessajwooldridge.files.wordpress.com/2016/11/history-books-for-kids_tea-and-christmas-sugar_5.jpg");
+        book.setPublishedYear(2000);
+        bookList.add(book);
+
+
+
+
+        book = new Book();
+        book.setBookTitle("4 Haunted Man");
+        book.setAuthorName("unknown");
+        book.setBookImage("https://www.tfwalsh.com/wp-content/uploads/2018/05/Banner-3.jpg");
+        book.setPublishedYear(2005);
+        bookList.add(book);
+
+
+
+
+
+
+        book = new Book();
+        book.setBookTitle("The Falconer");
+        book.setAuthorName("unknown");
+        book.setBookImage("https://www.elizabethmaywrites.com/wp-content/uploads/2014/05/banner.jpg");
+        book.setPublishedYear(1998);
+        bookList.add(book);
+
 
 
 

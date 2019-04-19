@@ -1,10 +1,14 @@
 package datanapps.androidxrecycleview;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.util.List;
 
@@ -13,8 +17,11 @@ import androidx.recyclerview.widget.RecyclerView;
 public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.UserViewHolder> {
     private List<Book> moviesList;
 
-    public BooksAdapter(List<Book> moviesList) {
+    private Context context;
+
+    public BooksAdapter(Context context, List<Book> moviesList) {
         this.moviesList = moviesList;
+        this.context = context;
     }
 
     @Override
@@ -27,10 +34,18 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.UserViewHold
 
     @Override
     public void onBindViewHolder(UserViewHolder holder, int position) {
-        Book movie = moviesList.get(position);
-        holder.bookName.setText(movie.getBookTitle());
-       // holder.genre.setText(movie.getGenre());
-       // holder.year.setText(movie.getYear());
+        Book book = moviesList.get(position);
+        holder.bookName.setText(book.getBookTitle());
+        holder.bookAuthor.setText(book.getAuthorName());
+        holder.publishedYear.setText(String.valueOf(book.getPublishedYear()));
+
+
+        Glide
+                .with(context)
+                .load(book.getBookImage())
+                .apply(new RequestOptions().fitCenter())
+                .into(holder.imageCover);
+
     }
 
     @Override
