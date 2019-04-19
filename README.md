@@ -36,6 +36,7 @@ To Integrate androidX Recycle view have to follow some steps.
 
 **3. Use androidxRecycleview in view layout activity_main.xml **
 
+
  `<androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycle_view_book"
         android:layout_width="match_parent"
@@ -52,6 +53,7 @@ To Integrate androidX Recycle view have to follow some steps.
         
 **4. Set Adapter in MainActivity.class **
 
+
  private void setRecycleViewList() {
         RecyclerView recyclerView = findViewById(R.id.recycle_view_book);
         BooksAdapter mAdapter = new BooksAdapter(MainActivity.this, getBookList());
@@ -60,6 +62,8 @@ To Integrate androidX Recycle view have to follow some steps.
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
     }
+    
+    
     
     private List<Book> getBookList(){
 
