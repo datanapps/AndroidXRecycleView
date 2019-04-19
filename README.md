@@ -63,7 +63,8 @@ To Integrate androidX Recycle view have to follow some steps.
 **4. Set Adapter in MainActivity.class **
 
 
- private fun setRecycleViewList() {
+
+        private fun setRecycleViewList() {
  
         val recyclerView = findViewById<RecyclerView>(R.id.recycle_view_book)
         
