@@ -27,9 +27,12 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycle_view_book"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:clipToPadding="false"
+        android:layout_marginTop="?android:attr/actionBarSize"
         app:layout_constraintTop_toBottomOf="@+id/appbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/appbar"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 
