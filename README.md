@@ -63,49 +63,50 @@ To Integrate androidX Recycle view have to follow some steps.
 **4. Set Adapter in MainActivity.class **
 
 
- private void setRecycleViewList() {
+ private fun setRecycleViewList() {
  
-        RecyclerView recyclerView = findViewById(R.id.recycle_view_book);
+        val recyclerView = findViewById<RecyclerView>(R.id.recycle_view_book)
         
-        BooksAdapter mAdapter = new BooksAdapter(MainActivity.this, getBookList());
+        val mAdapter = BooksAdapter(this@MainActivity, bookList)
         
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        val mLayoutManager = LinearLayoutManager(applicationContext)
         
-        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.layoutManager = mLayoutManager
         
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.itemAnimator = DefaultItemAnimator()
         
-        recyclerView.setAdapter(mAdapter);
+        recyclerView.adapter = mAdapter
         
     }
     
-    
-    
-    private List<Book> getBookList(){
+   
+    val bookList: List<Book>
+        get() {
 
-        List<Book> bookList = new ArrayList<>();
+            val bookList = ArrayList<Book>()
+            book = Book()
+            book.bookTitle = "My Story"
+            book.authorName = "John Deo"
+            book.bookImage = "https://0.s3.envato.com/files/183895378/preview%20image_590x300.jpg"
+            book.publishedYear = 1997
+            bookList.add(book)
 
-        Book book = new Book();
-        book.setBookTitle("History-books-for-Kids");
-        book.setAuthorName("unknown");
-        book.setBookImage("https://tessajwooldridge.files.wordpress.com/2016/11/history-books-for-kids_tea-and-christmas-sugar_5.jpg");
-        book.setPublishedYear(2000);
-        bookList.add(book);
+            book = Book()
+            book.bookTitle = "White Dragon"
+            book.authorName = "unknown"
+            book.bookImage = "https://arthive.com/res/media/img/oy800/work/e58/183471.jpg"
+            book.publishedYear = 2005
+            bookList.add(book)
 
-        book = new Book();
-        book.setBookTitle("The Girl without a name");
-        book.setAuthorName("aaa");
-        book.setBookImage("https://static1.squarespace.com/static/5746d6f1b654f905c35b5158/t/574f92014c2f85c0e9423612/1466204180094/");
-        book.setPublishedYear(1995);
-        bookList.add(book);
 
-        book = new Book();
-        book.setBookTitle("Classic-Childrens-Books");
-        book.setAuthorName("unknown");
-        book.setBookImage("https://dygtyjqp7pi0m.cloudfront.net/i/5736/8633103_1.jpg?v=8CE71410914F540");
-        book.setPublishedYear(1995);
-        bookList.add(book);
-     return bookList;
+            book = Book()
+            book.bookTitle = "XuGkeTK"
+            book.authorName = "unknown"
+            book.bookImage = "http://i.imgur.com/XuGkeTK.jpg"
+            book.publishedYear = 2009
+            bookList.add(book)
+
+     return bookList
     }
     
     
