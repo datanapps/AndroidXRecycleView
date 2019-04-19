@@ -6,6 +6,9 @@ AndroidX Recycleview Example
 All Android Developer using AndroidX supports for newer OS features. 
 This should help you to integrate recycle view.**
 
+![alt text](https://github.com/datanapps/AndroidXRecycleView/blob/master/screens/androidx_recycleview.gif)
+
+
 To Integrate androidX Recycle view have to follow some steps.
 
 
