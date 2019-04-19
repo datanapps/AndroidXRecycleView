@@ -38,6 +38,7 @@ To Integrate androidX Recycle view have to follow some steps.
 
 
  `           <androidx.recyclerview.widget.RecyclerView
+ 
         android:id="@+id/recycle_view_book"
         
         android:layout_width="match_parent"
