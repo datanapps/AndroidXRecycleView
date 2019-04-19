@@ -1,5 +1,5 @@
-# AndroidXRecycleView
-AndroidX Recycleview Example
+# AndroidX RecycleView in KOTLIN
+AndroidX Recycleview (KOTLIN) Example
 
 
 **AndroidX is the Android Extension library which is very new and exited Support in android library.
