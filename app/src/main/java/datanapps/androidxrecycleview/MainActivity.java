@@ -68,6 +68,14 @@ public class MainActivity extends AppCompatActivity {
         bookList.add(book);
 
 
+        book = new Book();
+        book.setBookTitle("bbb");
+        book.setAuthorName("bbb");
+        book.setBookImage("");
+        book.setPublishedYear(1995);
+        bookList.add(book);
+
+
 
 
 

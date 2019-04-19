@@ -3,6 +3,7 @@ package datanapps.androidxrecycleview;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -27,7 +28,7 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.UserViewHold
     @Override
     public void onBindViewHolder(UserViewHolder holder, int position) {
         Book movie = moviesList.get(position);
-        holder.title.setText(movie.getBookTitle());
+        holder.bookName.setText(movie.getBookTitle());
        // holder.genre.setText(movie.getGenre());
        // holder.year.setText(movie.getYear());
     }
@@ -38,13 +39,19 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.UserViewHold
     }
 
     public class UserViewHolder extends RecyclerView.ViewHolder {
-        public TextView title, year, genre;
+        public TextView bookName;
+        public TextView bookAuthor;
+        public ImageView imageCover;
+        public TextView publishedYear;
+
 
         public UserViewHolder(View view) {
             super(view);
-            title =  view.findViewById(R.id.title);
-            //genre =  view.findViewById(R.id.genre);
-            //year =  view.findViewById(R.id.year);
+            bookName =  view.findViewById(R.id.layout_book_list_title);
+            bookAuthor =  view.findViewById(R.id.layout_book_list_author);
+            imageCover =  view.findViewById(R.id.layout_book_list_book_cover);
+            publishedYear =  view.findViewById(R.id.layout_book_list_year);
+
         }
     }
 
